@@ -1,6 +1,6 @@
 % Creates, trains, tests and validates a fitting network, returning its
 % performance
-function [p,net1] = fitnetwork(n, inputs, targets)
+function [p,net1] = fitnetwork(n, inputs, targets, trainFunction)
 inputs = NormalData;
 targets = NormalRainRate;
 n = 30;
@@ -22,7 +22,7 @@ net.divideParam.valRatio = 15/100;
 net.divideParam.testRatio = 15/100;
 
 %Training function
-net.trainFcn = 'trainlm';  % Levenberg-Marquardt
+net.trainFcn = trainFunction;  % Levenberg-Marquardt
 
 %Performance Function
 net.performFcn = 'mse';  % Mean squared error
