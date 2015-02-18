@@ -68,4 +68,6 @@ view(net)
 nets = removedelay(net,a); %shifts outputs left by 'a' timesteps
 [xs,xis,ais,ts] = preparets(nets,inputSeries,targetSeries); %Rearranges data
 ys = nets(xs,xis,ais);
-earlyPredictPerformance = perform(net,ts,ys) %Recalculates the performance
+earlyPredictPerformance = perform(nets,ts,ys) %Recalculates the performance
+net2 = net;
+net3 = nets;

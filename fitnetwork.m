@@ -52,3 +52,4 @@ testPerformance = perform(net,testTargets,outputs);
 p = performance;
 % View the Network
 view(net)
+net1=net;
