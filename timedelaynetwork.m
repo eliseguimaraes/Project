@@ -51,11 +51,11 @@ trainTargets = gmultiply(targets,tr.trainMask); %applys a mask to sort out each 
 valTargets = gmultiply(targets,tr.valMask);
 testTargets = gmultiply(targets,tr.testMask);
 trainPerformance = perform(net,trainTargets,outputs);
-valPerformance = perform(net,valTargets,outputs)
+valPerformance = perform(net,valTargets,outputs);
 testPerformance = perform(net,testTargets,outputs);
 
 % View the Network
-view(net)
+view(net);
 
 % Early Prediction Network
 % In this some application, it's useful to get the prediction 'a' timesteps early.
@@ -64,6 +64,7 @@ view(net)
 nets = removedelay(net,a); %shifts outputs left by 'a' timesteps
 [xs,xis,ais,ts] = preparets(nets,inputSeries,targetSeries); %Rearranges data
 ys = nets(xs,xis,ais);
-earlyPredictPerformance = perform(nets,ts,ys) %Recalculates the performance
+earlyPredictPerformance = perform(nets,ts,ys); %Recalculates the performance
 net2 = net;
 net3 = nets;
+p = performance;
