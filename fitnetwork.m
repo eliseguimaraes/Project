@@ -1,9 +1,7 @@
 % Creates, trains, tests and validates a fitting network, returning its
 % performance
 function [p,net1] = fitnetwork(n, inputs, targets, trainFunction)
-inputs = NormalData;
-targets = NormalRainRate;
-n = 30;
+
 % Create a Fitting Network
 hiddenLayerSize = n;
 net = fitnet(hiddenLayerSize);

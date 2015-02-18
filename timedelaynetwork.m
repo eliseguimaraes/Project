@@ -1,11 +1,7 @@
 function [net2,net3,p] = timedelaynetwork(a,b,n, input, target, trainFunction) %the function receives as parameters the delays and the Hidden Layer Size
 % Solve an Input-Output Time-Series Problem with a Time Delay Neural
 % Network: prediction
-a = 3;
-b = 9;
-n = 10;
-input = NormalData;
-target = NormalRainRate;
+
 
 %This orientates data in appropriate columns and rows
 inputSeries = tonndata(input,true,false);
