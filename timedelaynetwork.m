@@ -1,4 +1,4 @@
-%function [net,nets,inputStates,layerStates] = timedelaynetwork(a,b,n, input, target) %the function receives as parameters the delays and the Hidden Layer Size
+function [net2,net3,p] = timedelaynetwork(a,b,n, input, target) %the function receives as parameters the delays and the Hidden Layer Size
 % Solve an Input-Output Time-Series Problem with a Time Delay Neural
 % Network: prediction
 a = 3;

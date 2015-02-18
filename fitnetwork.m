@@ -1,6 +1,6 @@
 % Creates, trains, tests and validates a fitting network, returning its
 % performance
-%function p = fitnetwork(n, inputs, targets)
+function [p,net1] = fitnetwork(n, inputs, targets)
 inputs = NormalData;
 targets = NormalRainRate;
 n = 30;
