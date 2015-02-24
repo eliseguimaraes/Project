@@ -1,10 +1,15 @@
+function [p,net1] = fitnetwork(n, inputs, targets, trainFunction)
 % Creates, trains, tests and validates a fitting network, returning its
 % performance
-function [p,net1] = fitnetwork(n, inputs, targets, trainFunction)
+%Function parameters
+%   n               ...     hidden layer size
+%   inputs           ...     neural network's input data
+%   targets          ...     neural network's input data
+%   trainFunction   ...     neural network's training method
 
-% Create a Fitting Network
-hiddenLayerSize = n;
-net = fitnet(hiddenLayerSize);
+
+hiddenLayerSize = n; 
+net = fitnet(hiddenLayerSize); % Create a Fitting Network
 
 % Choose Input and Output Pre/Post-Processing Functions
 net.inputs{1}.processFcns = {'removeconstantrows','mapminmax'};
