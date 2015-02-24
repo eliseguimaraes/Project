@@ -44,7 +44,7 @@ net.plotFcns = {'plotperform','plottrainstate','plotresponse', ...
 % Test the Network
 outputs = net(inputs,inputStates,layerStates);
 errors = gsubtract(targets,outputs);
-performance = perform(net,targets,outputs)
+performance = perform(net,targets,outputs);
 
 % Recalculate Training, Validation and Test Performance
 trainTargets = gmultiply(targets,tr.trainMask); %applys a mask to sort out each phases' targets
